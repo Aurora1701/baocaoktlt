@@ -130,7 +130,7 @@ int dangNhap() {
 int yeuCauGuiMK = 0;
 
 
-//ham lay lai mat khau
+//Ham lay lai mat khau
 void quenMatKhau() {
     FILE *f = fopen(TEN_TEP, "r");
     if (!f) {
@@ -148,13 +148,13 @@ void quenMatKhau() {
 
     if (strcmp(tenNhap, tenFile) == 0) {
         printf(">> Mat khau da duoc gui ve email da dang ky. Vui long kiem tra email: %s\n", emailFile);
-        yeuCauGuiMK = 1; // dánh d?u dã yêu c?u g?i
+        yeuCauGuiMK = 1; // Danh dau da yeu cau gui lai mat khau
     } else {
         printf(">> Ten dang nhap khong ton tai. Khong the khoi phuc mat khau.\n");
     }
 }
 
-//email nguoi dung
+//Xu ly Email nguoi dung
 void xuLyEmailNguoiDung()
 {
     FILE *f = fopen(TEN_TEP, "r");
