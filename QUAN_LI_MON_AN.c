@@ -2,27 +2,27 @@
 #include<stdlib.h>
 #include<string.h>
 
-//struct mon an
+//Struct Mon an
 typedef struct
 {
 	char tenMon[100];
 	float gia;
 }MonAn;
 
-//struct thuc don
+//Struct Thuc don
 typedef struct
 {
-	MonAn danhSachMonAn[100];//toi da 100 mon
-	int soLuongMon;//so luong mon trong thuc don
+	MonAn danhSachMonAn[100];//Toi da 100 mon
+	int soLuongMon;//So luong mon trong thuc don
 }Menu;
 
-//bao cac bien toan cuc
+//Khai bao cac bien toan cuc
 Menu menu;
 int soMon = 0;
 int ban[5];
 int soLuongMonCuaBan[5] = {0};
 
-//struct dat hang
+//Struct Dat hang
 typedef struct
 {
 	char tenMon[100];
@@ -51,7 +51,7 @@ void nhapMon(Menu *menu)
 	}
 }
 
-//ham in menu
+//Ham in menu
 void inMenu(Menu menu)
 {
 	if(menu.soLuongMon == 0)
@@ -68,7 +68,7 @@ void inMenu(Menu menu)
 	}
 }
 
-//luu thuc don vao file
+//Luu thuc don vao file
 void luuMenu(Menu menu, const char *fileName)
 {
 	FILE *f = fopen(fileName, "w");
@@ -87,7 +87,7 @@ void luuMenu(Menu menu, const char *fileName)
 	printf("Da luu thanh cong thuc don!\n");
 }
 
-//ham doc thuc don tu file
+//Ham doc thuc don tu file
 void docMenu(Menu *menu, const char *fileName)
 {
 	FILE *f = fopen(fileName, "r");
@@ -107,7 +107,7 @@ void docMenu(Menu *menu, const char *fileName)
 	printf("Da doc tu file thanh cong\n");
 }
 
-//dat mon cho ban
+//Dat mon cho ban
 void datMonChoBan(Menu menu)
 {
 	int banSo;
@@ -168,7 +168,7 @@ void hienThiDonHangBan(int banSo)
 	printf("Tong tien: %.2f VND\n", tongTien);
 }
 
-//xoa mon an
+//Ham xoa mon an
 void xoaMon(Menu *menu)
 {
 	if(menu->soLuongMon == 0)
@@ -191,7 +191,7 @@ void xoaMon(Menu *menu)
 	printf("Da xoa thanh cong!\n");
 }
 
-//ham cap nhat mon an (them - xoa - sua)
+//Ham cap nhat mon an (them - xoa - sua)
 void capNhatMonAn(Menu *menu) { 
     if(menu->soLuongMon == 0) { 
         printf("Thuc don trong. Khong co mon de cap nhat!\n");
